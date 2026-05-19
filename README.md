@@ -1,17 +1,87 @@
-# Arduino Template
-## Arduino Template
-### Arduino Template
-- Arduino Template
-- Arduino Template
-- Arduino Template
-  - Arduino Template
-  - Arduino Template
+# Cảm biến siêu âm MKE-S01 Ultrasonic Distance Sensor
 
-[Arduino Template](https://github.com/makereduvn/Arduino_Template)
+## Giới thiệu
 
-![Arduino Template](/extras/ArduinoTemplate.png)
+MKE-S01 Ultrasonic Distance Sensor là cảm biến đo khoảng cách sử dụng sóng siêu âm để xác định khoảng cách đến vật cản trong phạm vi từ 3cm đến 200cm với độ ổn định và độ chính xác cao. Cảm biến được tích hợp mạch xử lý chuyên dụng cùng thạch anh chất lượng tốt, giúp tăng độ bền, giảm nhiễu và đảm bảo kết quả đo tin cậy trong nhiều điều kiện hoạt động khác nhau.
 
+Cảm biến được ứng dụng rộng rãi trong nhiều hệ thống thực tế như: robot tránh vật cản, robot dò đường, xe tự hành AGV, hệ thống chống trộm, đo mức nước trong bồn chứa, cảm biến đỗ xe, thùng rác thông minh, cửa tự động, hệ thống cảnh báo va chạm và nhiều dự án IoT khác.
 
+Sản phẩm đặc biệt phù hợp cho các mô hình robot, dự án STEM, đồ án học tập và thực hành điện – điện tử, giúp người học dễ dàng tiếp cận nguyên lý đo khoảng cách bằng sóng siêu âm, kỹ thuật xử lý tín hiệu số và ứng dụng cảm biến trong các hệ thống tự động hóa thực tế. Đây là lựa chọn lý tưởng cho học sinh, sinh viên, giáo viên giảng dạy STEM và những người yêu thích nghiên cứu sáng tạo.
 
+MKE-S01 Ultrasonic Distance Sensor hỗ trợ điện áp giao tiếp 3.3V và 5VDC, cho phép kết nối trực tiếp và an toàn với Arduino, Raspberry Pi, NVIDIA Jetson, Micro:bit và nhiều nền tảng điều khiển khác. Sản phẩm đi kèm cáp kết nối 4P XH2.54 – Dupont, đảm bảo kết nối chắc chắn, ổn định và thuận tiện trong quá trình lắp đặt và sử dụng.
 
+## Thông số kỹ thuật
 
+- Điện áp hoạt động: 5VDC
+- Chuẩn giao tiếp: Digital
+- Điện áp giao tiếp: TTL 3.3VDC / 5VDC
+- Dòng điện hoạt động: 65mA
+- Tần số hoạt động: 40kHz
+- Khoảng cách đo: 3 – 200cm
+- Góc quét: 15°
+- Tín hiệu Trigger đầu vào: Xung TTL 10μs
+- Khả năng tương thích:
+  - Arduino
+  - Raspberry Pi
+  - Jetson Nano
+  - Micro:bit
+  - Và các board điều khiển 3.3/5VDC khác
+- Thiết kế mạch:
+  - Hoạt động ổn định, chống nhiễu tốt
+  - Giao tiếp đơn giản chỉ với 2 dây tín hiệu
+  - Phù hợp cho ứng dụng học tập và thực tế
+- Đi kèm cáp kết nối: 4P XH2.54 – Dupont
+
+## Các chân tín hiệu
+<table><thead>
+  <tr>
+    <th>MKE-S01</th>
+    <th>Ghi chú</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>GND</td>
+    <td>Chân cấp nguồn âm 0VDC</td>
+  </tr>
+  <tr>
+    <td>5V</td>
+    <td>Chân cấp nguồn dương 5VDC</td>
+  </tr>
+  <tr>
+    <td>TRIG</td>
+    <td>Chân tín hiệu ngõ vào Trigger</td>
+  </tr>
+  <tr>
+    <td>ECHO</td>
+    <td>Chân tín hiệu ngõ ra Echo</td>
+  </tr>
+</tbody>
+</table>
+
+## Hướng dẫn sử dụng
+### Hướng dẫn kết nối
+- Cấp nguồn 5VDC cho mạch qua hai chân GND và 5V.
+- kết nối chân TRIG và ECHO của Sensor với chân điều khiển được khai báo trong chương trình.
+
+### Hướng dẫn sử dụng với Arduino Uno / Vietduino Uno / ESP32
+- Trong **Tools / Library Manager**, tìm và cài đặt bộ thư viện tổng hợp **"MKE_ONE" by MakerEdu.vn**
+- Mở chương trình mẫu **"MKE_S01_Ultrasonic_Serial_XXX"** tại **File / Examples / MAKEREDU / Module / MKE_S01_Ultrasonic**
+- Cấu hình board mạch tương ứng là **Arduino Uno / ESP32**, chọn đúng cổng **COM Port** của mạch và nhấn **Upload** để nạp chương trình.
+- Cấp nguồn 5VDC cho mạch, kết nối chân TRIG và ECHO của Sensor với chân điều khiển được khai báo trong chương trình.
+- Xem kết quả mạch hoạt động theo chương trình đã nạp.
+
+### Hướng dẫn lập trình với Micro:bit (kéo thả khối)
+
+- Khởi động [Microsoft MakeCode](https://makecode.microbit.org/) và **Import** chương trình theo đường link sau: `https://github.com/makereduvn/mke_s01_ultrasonic_microbit/`
+- Kết nối mạch Micro:bit và **Download** chương trình.
+- Cấp nguồn 5VDC cho mạch, kết nối chân TRIG và ECHO của Sensor với chân điều khiển được khai báo trong chương trình.
+- Xem kết quả mạch hoạt động theo chương trình đã nạp.
+
+Nếu bắt đầu tự án mới cần cài đặt Extension **MKE_ONE_MICROBIT** trên [Microsoft MakeCode](https://makecode.microbit.org/) theo [hướng dẫn tại đây](https://github.com/makereduvn/MKE_ONE_MICROBIT). Sau khi cài đặt thành công, các khối lệnh của Extension **MKE_ONE_MICROBIT** sẽ xuất hiện trong danh sách block và sẵn sàng để sử dụng.
+
+## Kích thước sản phẩm
+![MKE-S01 Ultrasonic](/extras/MKE-S01_1.jpg)
+
+## Hình ảnh sản phẩm
+![MKE-S01 Ultrasonic](/extras/MKE-S01_2.png)
+![MKE-S01 Ultrasonic](/extras/MKE-S01_3.png)
